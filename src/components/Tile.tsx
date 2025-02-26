@@ -55,7 +55,7 @@ const Tile: React.FC<TileProps> = ({
       whileHover="hover"
       animate="rest"
     >
-      <img src={image} alt={title} className="object-cover h-full" />
+      <img src={image} alt={title} className="object-cover w-full h-full" />
 
       <TextPanelContainer
         color="transparent"
