@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { alpha, styled } from "@mui/material"
 import { LocationData } from "../atoms"
-import { useNavigate } from "../utils"
+import { getImagePath, useNavigate } from "../utils"
 
 const TileMotionContainer = styled(motion.div)({
   position: "relative",
@@ -24,7 +24,13 @@ interface TileProps {
 }
 
 const Tile: React.FC<TileProps> = ({ location: locationData }) => {
-  const { name: title, description, image, location, path } = locationData
+  const {
+    name: title,
+    description,
+    imageFileName,
+    location,
+    path,
+  } = locationData
   const navigate = useNavigate()
   const titleTextRef = React.useRef<HTMLDivElement>(null)
   const containerRef = React.useRef<HTMLDivElement>(null)
@@ -53,7 +59,11 @@ const Tile: React.FC<TileProps> = ({ location: locationData }) => {
       whileHover="hover"
       animate="rest"
     >
-      <img src={image} alt={title} className="object-cover w-full h-full" />
+      <img
+        src={getImagePath(imageFileName)}
+        alt={title}
+        className="object-cover w-full h-full"
+      />
 
       <TextPanelContainer
         color="transparent"

@@ -1,7 +1,7 @@
 import { atom } from "jotai"
 
 export type LocationData = {
-  image: string
+  imageFileName: string
   name: string
   path: string
   location: string
@@ -12,7 +12,7 @@ export type LocationData = {
 
 const defaultLocations: LocationData[] = [
   {
-    image: "/wagadou.jpg",
+    imageFileName: "wagadou.jpg",
     location: "Mali",
     name: "Wagadou",
     path: "wagadou",
@@ -22,7 +22,7 @@ const defaultLocations: LocationData[] = [
     longitude: -3.996166,
   },
   {
-    image: "/catahoyuk.jpg",
+    imageFileName: "catahoyuk.jpg",
     location: "Turkey",
     name: "Catahouyuk",
     path: "catahoyuk",
@@ -32,7 +32,7 @@ const defaultLocations: LocationData[] = [
     longitude: 32.8252,
   },
   {
-    image: "/fire_temple.jpg",
+    imageFileName: "fire_temple.jpg",
     location: "Iran",
     name: "Zoroastrian Fire Temples",
     path: "fire_temples",
@@ -42,7 +42,7 @@ const defaultLocations: LocationData[] = [
     longitude: 52.5311,
   },
   {
-    image: "/cordoba.jpg",
+    imageFileName: "cordoba.jpg",
     location: "Cordoba",
     name: "Great Mosque",
     path: "great_mosque",
@@ -52,7 +52,7 @@ const defaultLocations: LocationData[] = [
     longitude: -4.7794,
   },
   {
-    image: "/taghaza.jpg",
+    imageFileName: "taghaza.jpg",
     location: "Western Sahara",
     name: "Kingdom of Mali",
     path: "taghaza",
@@ -62,7 +62,7 @@ const defaultLocations: LocationData[] = [
     longitude: -13.0518,
   },
   {
-    image: "/baghdad.jpeg",
+    imageFileName: "baghdad.jpeg",
     location: "Iraq",
     name: "Baghdad",
     path: "baghdad",

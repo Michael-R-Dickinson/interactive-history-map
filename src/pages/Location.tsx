@@ -1,13 +1,14 @@
 import React from "react"
 import { LocationData } from "../atoms"
 import { Box, Typography, Button } from "@mui/material"
+import { getImagePath } from "../utils"
 
 interface LocationProps {
   locationData: LocationData
 }
 
 const Location: React.FC<LocationProps> = ({ locationData }) => {
-  const { name, description, image, location } = locationData
+  const { name, description, imageFileName, location } = locationData
   return (
     <div className="flex justify-center w-full">
       <Box
@@ -44,7 +45,7 @@ const Location: React.FC<LocationProps> = ({ locationData }) => {
 
           <Box className="w-3/4">
             <img
-              src={image}
+              src={getImagePath(imageFileName)}
               alt={name}
               className="h-auto rounded-md shadow-md"
             />
