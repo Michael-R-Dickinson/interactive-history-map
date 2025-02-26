@@ -1,6 +1,6 @@
 import { atom } from "jotai"
 
-type LocationData = {
+export type LocationData = {
   image: string
   title: string
   location: string

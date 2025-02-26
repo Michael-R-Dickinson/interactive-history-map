@@ -3,6 +3,7 @@ import Map, { NavigationControl, Marker } from "react-map-gl/maplibre"
 import maplibregl from "maplibre-gl"
 import { useAtomValue } from "jotai"
 import { locationsDataAtom } from "../atoms"
+import MapPOIMarker from "./MapPOIMarker"
 
 const InteractiveMap: React.FC = () => {
   const locations = useAtomValue(locationsDataAtom)
@@ -33,12 +34,7 @@ const InteractiveMap: React.FC = () => {
             latitude={location.latitude}
             longitude={location.longitude}
           >
-            <img
-              className="w-8 h-8 bg-blue-600 border-2 border-white rounded-full"
-              style={{ width: 50, height: 50, cursor: "pointer" }}
-              onClick={() => alert(`Clicked on: ${location.title}`)}
-              src={location.image}
-            ></img>
+            <MapPOIMarker location={location} />
           </Marker>
         ))}
       </Map>
