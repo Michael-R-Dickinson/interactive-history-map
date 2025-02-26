@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { alpha, styled } from "@mui/material"
-import { useLocation } from "wouter"
 import { LocationData } from "../atoms"
+import { useNavigate } from "../utils"
 
 const TileMotionContainer = styled(motion.div)({
   position: "relative",
@@ -25,7 +25,7 @@ interface TileProps {
 
 const Tile: React.FC<TileProps> = ({ location: locationData }) => {
   const { name: title, description, image, location, path } = locationData
-  const [, setLocation] = useLocation()
+  const navigate = useNavigate()
   const titleTextRef = React.useRef<HTMLDivElement>(null)
   const containerRef = React.useRef<HTMLDivElement>(null)
   const [titleTextUnhoveredOffset, setTitleTextUnhoveredOffset] = useState<
@@ -43,7 +43,7 @@ const Tile: React.FC<TileProps> = ({ location: locationData }) => {
   })
 
   const onClick = () => {
-    setLocation("/" + path)
+    navigate(path)
   }
 
   return (

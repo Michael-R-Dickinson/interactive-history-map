@@ -1,7 +1,7 @@
 import React from "react"
 import Map from "./pages/Map"
 import Location from "./pages/Location"
-import { Route, Switch } from "wouter"
+import { Route, Router, Switch } from "wouter"
 import { useAtomValue } from "jotai"
 import { locationsDataAtom } from "./atoms"
 import { Box } from "@mui/material"
@@ -19,16 +19,18 @@ const App: React.FC = () => {
       <Box>
         <Navbar />
       </Box>
-      <Switch>
-        <Route path="/">
-          <Map />
-        </Route>
-        {locations.map((location) => (
-          <Route path={location.path}>
-            <Location locationData={location} />
+      <Router base="/hist-interactive-map">
+        <Switch>
+          <Route path="/">
+            <Map />
           </Route>
-        ))}
-      </Switch>
+          {locations.map((location) => (
+            <Route path={`location/${location.path}`}>
+              <Location locationData={location} />
+            </Route>
+          ))}
+        </Switch>
+      </Router>
     </div>
   )
 }
