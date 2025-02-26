@@ -14,7 +14,7 @@ const waypoints = [
   {
     latitude: 51.5074,
     longitude: -0.1278,
-    image: "/images/london.jpg",
+    image: "/map.jpg",
     title: "London",
   },
   {
@@ -36,7 +36,7 @@ const InteractiveMap: React.FC = () => {
     "https://api.maptiler.com/maps/b2f17cd3-732f-4fd4-bd08-86199b3174d1/style.json?key=yhnnu3oRHFRMS2RI6I75"
 
   return (
-    <div style={{ width: "100%", height: "100%" }}>
+    <div style={{ width: "100%", height: "100%", position: "relative" }}>
       <Map
         {...viewState}
         onMove={(evt) => setViewState(evt.viewState)}
@@ -45,7 +45,7 @@ const InteractiveMap: React.FC = () => {
         style={{ width: "100%", height: "100%" }}
         doubleClickZoom={false}
       >
-        <NavigationControl position="top-left" />
+        <NavigationControl position="top-right" />
 
         {/* Render each waypoint as a Marker with an image */}
         {waypoints.map((waypoint, index) => (
@@ -53,14 +53,12 @@ const InteractiveMap: React.FC = () => {
             key={index}
             latitude={waypoint.latitude}
             longitude={waypoint.longitude}
-            anchor="bottom"
           >
-            <img
-              src={waypoint.image}
-              alt={waypoint.title}
+            <div
+              className="w-5 h-5 bg-blue-600"
               style={{ width: 50, height: 50, cursor: "pointer" }}
               onClick={() => alert(`Clicked on: ${waypoint.title}`)}
-            />
+            ></div>
           </Marker>
         ))}
       </Map>
