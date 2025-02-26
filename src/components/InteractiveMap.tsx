@@ -1,31 +1,11 @@
 import React, { useState } from "react"
 import Map, { NavigationControl, Marker } from "react-map-gl/maplibre"
 import maplibregl from "maplibre-gl"
-
-// Example waypoints array
-// Replace with your own data and image URLs
-const waypoints = [
-  {
-    latitude: 48.8566,
-    longitude: 2.3522,
-    image: "/images/paris.jpg",
-    title: "Paris",
-  },
-  {
-    latitude: 51.5074,
-    longitude: -0.1278,
-    image: "/map.jpg",
-    title: "London",
-  },
-  {
-    latitude: 40.7128,
-    longitude: -74.006,
-    image: "/images/newyork.jpg",
-    title: "New York",
-  },
-]
+import { useAtomValue } from "jotai"
+import { locationsDataAtom } from "../atoms"
 
 const InteractiveMap: React.FC = () => {
+  const locations = useAtomValue(locationsDataAtom)
   const [viewState, setViewState] = useState({
     latitude: 40,
     longitude: 10,
@@ -47,18 +27,18 @@ const InteractiveMap: React.FC = () => {
       >
         <NavigationControl position="top-right" />
 
-        {/* Render each waypoint as a Marker with an image */}
-        {waypoints.map((waypoint, index) => (
+        {locations.map((location, index) => (
           <Marker
             key={index}
-            latitude={waypoint.latitude}
-            longitude={waypoint.longitude}
+            latitude={location.latitude}
+            longitude={location.longitude}
           >
-            <div
-              className="w-5 h-5 bg-blue-600"
+            <img
+              className="w-8 h-8 bg-blue-600 border-2 border-white rounded-full"
               style={{ width: 50, height: 50, cursor: "pointer" }}
-              onClick={() => alert(`Clicked on: ${waypoint.title}`)}
-            ></div>
+              onClick={() => alert(`Clicked on: ${location.title}`)}
+              src={location.image}
+            ></img>
           </Marker>
         ))}
       </Map>
