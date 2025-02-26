@@ -22,7 +22,6 @@ const Navbar: React.FC = () => {
       className="backdrop-blur-md"
     >
       <Toolbar className="flex items-center justify-between">
-        {/* Title and subtitle */}
         <Box>
           <Typography variant="h5" className="font-serif text-gray-900">
             Capstone Project – World Architecture and Design
@@ -31,7 +30,6 @@ const Navbar: React.FC = () => {
             Michael Dickinson
           </Typography>
         </Box>
-        {/* Navigation Links */}
         <Box className="hover:text-gray-600 flex space-x-4 text-black">
           <Link
             href="#"
