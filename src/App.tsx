@@ -11,7 +11,7 @@ const App: React.FC = () => {
   //   )
   // }, [])
   return (
-    <Box sx={{ height: "100vh", width: "100vw", overflow: "hidden" }}>
+    <Box sx={{ height: "100vh", width: "100vw" }}>
       <Box>
         <Navbar />
       </Box>
@@ -33,7 +33,6 @@ const App: React.FC = () => {
           </Box>
         </Box>
       </Box>
-      <Box>Hello</Box>
     </Box>
   )
 }
