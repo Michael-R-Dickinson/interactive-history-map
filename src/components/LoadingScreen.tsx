@@ -23,8 +23,8 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ children }) => {
             exit={{
               opacity: 0,
               transition: {
-                delay: 0.2,
-                duration: 1,
+                delay: 0.08,
+                duration: 0.5,
               },
             }}
             className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-white"
@@ -35,7 +35,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ children }) => {
                 className="bg-slate-300 h-full"
                 initial={{ width: "0%" }}
                 animate={{ width: "100%" }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
+                transition={{ duration: 0.2, delay: 0.05, ease: "easeOut" }}
               />
             </div>
           </motion.div>
