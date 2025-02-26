@@ -47,7 +47,7 @@ const Location: React.FC<LocationProps> = ({ locationData }) => {
             <img
               src={getImagePath(imageFileName)}
               alt={name}
-              className="h-auto rounded-md shadow-md"
+              className="h-auto rounded-md shadow-md max-w-[800px] max-h-[500px]"
             />
 
             <Box className="mt-4 mb-2">
