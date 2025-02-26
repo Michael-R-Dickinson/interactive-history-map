@@ -2,7 +2,7 @@ import { atom } from "jotai"
 
 export type LocationData = {
   image: string
-  title: string
+  name: string
   location: string
   description: string
   latitude: number
@@ -13,7 +13,7 @@ const defaultLocations: LocationData[] = [
   {
     image: "/wagadou.jpg",
     location: "Mali",
-    title: "Wagadou",
+    name: "Wagadou",
     description: "Description for Tile 3",
     latitude: 17.570692,
     longitude: -3.996166,
@@ -21,7 +21,7 @@ const defaultLocations: LocationData[] = [
   {
     image: "/catahoyuk.jpg",
     location: "Turkey",
-    title: "Catahouyuk",
+    name: "Catahouyuk",
     description: "Description for Tile 1",
     latitude: 37.6173,
     longitude: 32.8252,
@@ -29,7 +29,7 @@ const defaultLocations: LocationData[] = [
   {
     image: "/fire_temple.jpg",
     location: "Iran",
-    title: "Zoroastrian Fire Temples",
+    name: "Zoroastrian Fire Temples",
     description: "Description for Tile 2",
     latitude: 29.6121,
     longitude: 52.5311,
@@ -37,7 +37,7 @@ const defaultLocations: LocationData[] = [
   {
     image: "/cordoba.jpg",
     location: "Cordoba",
-    title: "Great Mosque",
+    name: "Great Mosque",
     description: "Description for Tile 2",
     latitude: 37.8882,
     longitude: -4.7794,

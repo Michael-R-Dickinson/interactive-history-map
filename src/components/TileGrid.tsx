@@ -17,10 +17,10 @@ const TileGrid: React.FC = () => {
         <Box key={index} className="lg:p-4 md:p-2">
           <Tile
             image={poi.image}
-            title={poi.title}
+            title={poi.name}
             location={poi.location}
             description={poi.description}
-            onClick={() => handleTileClick(poi.title)}
+            onClick={() => handleTileClick(poi.name)}
           />
         </Box>
       ))}
