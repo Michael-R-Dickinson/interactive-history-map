@@ -8,12 +8,14 @@ import {
   styled,
   alpha,
 } from "@mui/material"
+import { useLocation } from "wouter"
 
 const NavMenu = styled(AppBar)({
   backgroundColor: alpha("#fff", 0.5),
 })
 
 const Navbar: React.FC = () => {
+  const [location] = useLocation()
   return (
     <NavMenu
       position="fixed"
@@ -21,7 +23,11 @@ const Navbar: React.FC = () => {
       elevation={0}
       className="backdrop-blur-md"
     >
-      <Toolbar className="flex items-center justify-between">
+      <Toolbar
+        className={`flex transition-all duration-500 ease-in-out items-center justify-between ${
+          location != "/" ? "bg-slate-200" : ""
+        } `}
+      >
         <Box>
           <Typography variant="h5" className="font-serif text-gray-900">
             Capstone Project – World Architecture and Design

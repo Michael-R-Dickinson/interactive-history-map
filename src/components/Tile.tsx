@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { alpha, styled } from "@mui/material"
+import { useLocation } from "wouter"
+import { LocationData } from "../atoms"
 
 const TileMotionContainer = styled(motion.div)({
   position: "relative",
@@ -18,20 +20,12 @@ const TextPanelContainer = styled(motion.div)({
 })
 
 interface TileProps {
-  image: string
-  location: string
-  title: string
-  description: string
-  onClick?: () => void
+  location: LocationData
 }
 
-const Tile: React.FC<TileProps> = ({
-  image,
-  title,
-  location,
-  description,
-  onClick,
-}) => {
+const Tile: React.FC<TileProps> = ({ location: locationData }) => {
+  const { name: title, description, image, location, path } = locationData
+  const [, setLocation] = useLocation()
   const titleTextRef = React.useRef<HTMLDivElement>(null)
   const containerRef = React.useRef<HTMLDivElement>(null)
   const [titleTextUnhoveredOffset, setTitleTextUnhoveredOffset] = useState<
@@ -47,6 +41,10 @@ const Tile: React.FC<TileProps> = ({
     window.addEventListener("resize", calculateTitleTextOffset, false)
     calculateTitleTextOffset()
   })
+
+  const onClick = () => {
+    setLocation("/" + path)
+  }
 
   return (
     <TileMotionContainer
