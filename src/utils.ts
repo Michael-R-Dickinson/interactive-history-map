@@ -10,4 +10,6 @@ export const useNavigate = () => {
 }
 
 export const getImagePath = (imageFileName: string) =>
-  `${import.meta.env.BASE_URL}/${imageFileName}`
+  `${BASE_URL}/${imageFileName}`
+
+export const BASE_URL = import.meta.env.BASE_URL.slice(0, -1)

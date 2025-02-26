@@ -6,6 +6,7 @@ import { useAtomValue } from "jotai"
 import { locationsDataAtom } from "./atoms"
 import { Box } from "@mui/material"
 import Navbar from "./components/Navbar"
+import { BASE_URL } from "./utils"
 
 const App: React.FC = () => {
   const locations = useAtomValue(locationsDataAtom)
@@ -19,13 +20,13 @@ const App: React.FC = () => {
       <Box>
         <Navbar />
       </Box>
-      <Router base="/hist-interactive-map">
+      <Router base={BASE_URL}>
         <Switch>
           <Route path="/">
             <Map />
           </Route>
           {locations.map((location) => (
-            <Route path={`location/${location.path}`}>
+            <Route path={`location/${location.path}`} key={location.path}>
               <Location locationData={location} />
             </Route>
           ))}
