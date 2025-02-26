@@ -7,6 +7,7 @@ import { locationsDataAtom } from "./atoms"
 import { Box } from "@mui/material"
 import Navbar from "./components/Navbar"
 import { BASE_URL } from "./utils"
+import LoadingScreen from "./components/LoadingScreen"
 
 const App: React.FC = () => {
   const locations = useAtomValue(locationsDataAtom)
@@ -23,7 +24,9 @@ const App: React.FC = () => {
       <Router base={BASE_URL}>
         <Switch>
           <Route path="/">
-            <Map />
+            <LoadingScreen>
+              <Map />
+            </LoadingScreen>
           </Route>
           {locations.map((location) => (
             <Route path={`location/${location.path}`} key={location.path}>

@@ -43,11 +43,11 @@ const Location: React.FC<LocationProps> = ({ locationData }) => {
             </Typography>
           </Box>
 
-          <Box className="w-3/4">
+          <Box className="w-3/4 min-w-[700px] max-w-[800px] max-h-[500px]">
             <img
               src={getImagePath(imageFileName)}
               alt={name}
-              className="h-auto rounded-md shadow-md max-w-[800px] max-h-[500px]"
+              className="w-full h-auto rounded-md shadow-md"
             />
 
             <Box className="mt-4 mb-2">

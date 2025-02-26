@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { motion } from "framer-motion"
-import { alpha, styled } from "@mui/material"
+import { styled } from "@mui/material"
 import { LocationData } from "../atoms"
 import { getImagePath, useNavigate } from "../utils"
 
@@ -15,9 +15,7 @@ const TileMotionContainer = styled(motion.div)({
   height: "100%",
 })
 
-const TextPanelContainer = styled(motion.div)({
-  backgroundColor: alpha("#fff", 0.6),
-})
+const TextPanelContainer = styled(motion.div)({})
 
 interface TileProps {
   location: LocationData
@@ -67,7 +65,7 @@ const Tile: React.FC<TileProps> = ({ location: locationData }) => {
 
       <TextPanelContainer
         color="transparent"
-        className="backdrop-blur-xs absolute bottom-0 left-0 right-0 h-full"
+        className="absolute bottom-0 left-0 right-0 h-full"
         variants={{
           rest: {
             y: titleTextUnhoveredOffset
@@ -79,12 +77,23 @@ const Tile: React.FC<TileProps> = ({ location: locationData }) => {
         transition={{ duration: 0.2 }}
         ref={containerRef}
       >
-        <div className="px-4">
-          <div className="py-2" ref={titleTextRef}>
-            <h3 className="text-xl text-gray-800">{title}</h3>
-            <p className="text-sm text-gray-500">{location}</p>
+        <div
+          className="backdrop-blur-xs w-full h-full bg-[rgba(255,255,255,0.6)]"
+          // For a potential opacity animation as they load in
+          // initial="start"
+          // animate="rest"
+          // variants={{
+          //   start: { opacity: 0 },
+          //   rest: { opacity: 1 },
+          // }}
+        >
+          <div className="px-4">
+            <div className="py-2" ref={titleTextRef}>
+              <h3 className="text-xl text-gray-800">{title}</h3>
+              <p className="text-sm text-gray-500">{location}</p>
+            </div>
+            <p className="text-sm text-gray-600">{description}</p>
           </div>
-          <p className="text-sm text-gray-600">{description}</p>
         </div>
       </TextPanelContainer>
     </TileMotionContainer>
