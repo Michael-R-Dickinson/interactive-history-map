@@ -32,10 +32,10 @@ const CaptionAndTextSection: React.FC<CaptionAndTextSectionProps> = ({
         ))}
       </Box>
       {imageFileName && (
-        <Box className="w-2/3 min-w-[400px] max-w-[800px] max-h-[500px] mb-10">
+        <Box className="w-2/3 min-w-[400px] max-w-[800px] mb-10">
           <img
             src={getImagePath(imageFileName)}
-            className="w-full h-auto rounded-md shadow-md"
+            className="object-contain rounded-md shadow-md max-h-[500px]"
           />
         </Box>
       )}
