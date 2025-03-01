@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
         </Box>
         <Box className="hover:text-gray-600 flex space-x-4 text-black">
           <Link
-            href="#"
+            href="/"
             underline="none"
             color="inherit"
             className=" transition-colors"
