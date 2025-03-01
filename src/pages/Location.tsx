@@ -1,5 +1,5 @@
 import React from "react"
-import { LocationData } from "../atoms"
+import { CaptionDescription, LocationData } from "../atoms"
 import { Box, Typography } from "@mui/material"
 import CaptionAndTextSection from "../components/CaptionAndTextSection"
 import LocationImage from "../components/LocationImage"
@@ -11,13 +11,18 @@ interface LocationProps {
 const Location: React.FC<LocationProps> = ({ locationData }) => {
   const {
     name,
-    descriptionParagraphs,
+    overview,
     imageFileName,
     location,
     dateRange,
     globalSignificanceSection,
     lifeAtLocationSection,
+    descriptionParagraphs,
   } = locationData
+  const descriptionSection: CaptionDescription = {
+    caption: "Description",
+    paragraphs: descriptionParagraphs,
+  }
   return (
     <div className="h-fit flex justify-center w-full bg-white">
       <Box
@@ -46,7 +51,18 @@ const Location: React.FC<LocationProps> = ({ locationData }) => {
           </Box>
 
           <Box className="left-28 relative w-5/6 mb-8">
-            <div>
+            <Typography
+              className="text-gray-700"
+              fontFamily={"sans-serif"}
+              sx={{
+                marginBottom: "0.25rem",
+                fontSize: "1.1rem",
+                fontStretch: "150%",
+              }}
+            >
+              {overview}
+            </Typography>
+            {/* <div>
               {descriptionParagraphs?.map((paragraph, index) => (
                 <Typography
                   variant="body1"
@@ -57,11 +73,12 @@ const Location: React.FC<LocationProps> = ({ locationData }) => {
                   {paragraph}
                 </Typography>
               ))}
-            </div>
+            </div> */}
           </Box>
 
           <LocationImage imageFileName={imageFileName} alt={name} />
 
+          <CaptionAndTextSection textSection={descriptionSection} />
           <CaptionAndTextSection textSection={lifeAtLocationSection} />
           <CaptionAndTextSection textSection={globalSignificanceSection} />
         </Box>

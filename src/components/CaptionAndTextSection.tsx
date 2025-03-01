@@ -1,6 +1,7 @@
 import React from "react"
 import { CaptionDescription } from "../atoms"
 import { Box, Typography } from "@mui/material"
+import { getImagePath } from "../utils"
 
 interface CaptionAndTextSectionProps {
   textSection: CaptionDescription
@@ -9,7 +10,7 @@ interface CaptionAndTextSectionProps {
 const CaptionAndTextSection: React.FC<CaptionAndTextSectionProps> = ({
   textSection,
 }) => {
-  const { caption, paragraphs } = textSection
+  const { caption, paragraphs, imageFileName } = textSection
   return (
     <div>
       <Box className="mt-4 mb-2">
@@ -30,6 +31,14 @@ const CaptionAndTextSection: React.FC<CaptionAndTextSectionProps> = ({
           </Typography>
         ))}
       </Box>
+      {imageFileName && (
+        <Box className="w-2/3 min-w-[400px] max-w-[800px] max-h-[500px] mb-10">
+          <img
+            src={getImagePath(imageFileName)}
+            className="w-full h-auto rounded-md shadow-md"
+          />
+        </Box>
+      )}
     </div>
   )
 }
