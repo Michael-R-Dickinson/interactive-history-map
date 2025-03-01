@@ -4,6 +4,6 @@ import tailwindcss from "@tailwindcss/vite"
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/hist-interactive-map/",
+  base: "/interactive-history-map/",
   plugins: [react(), tailwindcss()],
 })

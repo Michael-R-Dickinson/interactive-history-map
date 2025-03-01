@@ -17,7 +17,7 @@ const App: React.FC = () => {
   //   )
   // }, [])
   return (
-    <div className="min-w-[100vw] h-[100vh] bg-white">
+    <div className="min-w-[100vw] min-h-[100vh] bg-white">
       <Box>
         <Navbar />
       </Box>
@@ -33,6 +33,11 @@ const App: React.FC = () => {
               <Location locationData={location} />
             </Route>
           ))}
+          <Route path="*">
+            <div className="flex justify-center items-center h-[100vh] w-[100vw] text-amber-900">
+              <h1>404 Not Found</h1>
+            </div>
+          </Route>
         </Switch>
       </Router>
     </div>
