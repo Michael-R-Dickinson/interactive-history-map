@@ -1,14 +1,7 @@
 import React from "react"
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  Link,
-  Box,
-  styled,
-  alpha,
-} from "@mui/material"
+import { AppBar, Toolbar, Typography, Box, styled, alpha } from "@mui/material"
 import { useLocation } from "wouter"
+import { useNavigate } from "../utils"
 
 const NavMenu = styled(AppBar)({
   backgroundColor: alpha("#fff", 0.5),
@@ -16,6 +9,7 @@ const NavMenu = styled(AppBar)({
 
 const Navbar: React.FC = () => {
   const [location] = useLocation()
+  const navigate = useNavigate()
   return (
     <NavMenu
       position="fixed"
@@ -37,19 +31,13 @@ const Navbar: React.FC = () => {
           </Typography>
         </Box>
         <Box className="hover:text-gray-600 flex space-x-4 text-black">
-          <Link
-            href=""
-            underline="none"
+          <p
+            onClick={() => navigate("/")}
             color="inherit"
             className=" transition-colors"
-            sx={{
-              "&:hover": {
-                color: "inherit",
-              },
-            }}
           >
             Home
-          </Link>
+          </p>
         </Box>
       </Toolbar>
     </NavMenu>
