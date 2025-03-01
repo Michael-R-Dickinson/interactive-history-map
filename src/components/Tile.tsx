@@ -24,7 +24,7 @@ interface TileProps {
 const Tile: React.FC<TileProps> = ({ location: locationData }) => {
   const {
     name: title,
-    description,
+    overview: description,
     imageFileName,
     location,
     path,

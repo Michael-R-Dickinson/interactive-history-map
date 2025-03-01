@@ -4,8 +4,10 @@ export type LocationData = {
   imageFileName: string
   name: string
   path: string
+  dateRange: string
   location: string
-  description: string
+  overview: string
+  descriptionParagraphs?: string[]
   latitude: number
   longitude: number
 }
@@ -16,8 +18,13 @@ const defaultLocations: LocationData[] = [
     location: "Mali",
     name: "Wagadou",
     path: "wagadou",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+    dateRange: "300-1200 AD",
+    overview:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    descriptionParagraphs: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    ],
     latitude: 17.570692,
     longitude: -3.996166,
   },
@@ -26,8 +33,12 @@ const defaultLocations: LocationData[] = [
     location: "Turkey",
     name: "Catahouyuk",
     path: "catahoyuk",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+    dateRange: "300-1200 AD",
+    overview: "",
+    descriptionParagraphs: [
+      "Çatalhöyük is an ancient archaeological site located near modern-day Konya in Turkey . It existed from approximately 7100 BCE to 5700 BCE, and, at its height housed between 3000 and 8000 people. The site is notable for being one of the largest and best-preserved Neolithic settlements. It stands out for its unique layout with no streets and densely packed houses that could be accessed via a ladder through the ceiling. ",
+      "The people who once lived there domesticated animals, practiced agriculture, and traded frequently with other civilizations. From the site, we can gain insight into the way people in ancient civilizations lived and the societal structures that existed at the time.",
+    ],
     latitude: 37.6173,
     longitude: 32.8252,
   },
@@ -36,8 +47,13 @@ const defaultLocations: LocationData[] = [
     location: "Iran",
     name: "Zoroastrian Fire Temples",
     path: "fire_temples",
-    description:
+    dateRange: "300-1200 AD",
+    overview:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+    descriptionParagraphs: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    ],
     latitude: 29.6121,
     longitude: 52.5311,
   },
@@ -46,8 +62,13 @@ const defaultLocations: LocationData[] = [
     location: "Cordoba",
     name: "Great Mosque",
     path: "great_mosque",
-    description:
+    dateRange: "300-1200 AD",
+    overview:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+    descriptionParagraphs: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    ],
     latitude: 37.8882,
     longitude: -4.7794,
   },
@@ -56,8 +77,13 @@ const defaultLocations: LocationData[] = [
     location: "Western Sahara",
     name: "Kingdom of Mali",
     path: "taghaza",
-    description:
+    dateRange: "300-1200 AD",
+    overview:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+    descriptionParagraphs: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    ],
     latitude: 20.7856,
     longitude: -13.0518,
   },
@@ -66,8 +92,13 @@ const defaultLocations: LocationData[] = [
     location: "Iraq",
     name: "Baghdad",
     path: "baghdad",
-    description:
+    dateRange: "300-1200 AD",
+    overview:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+    descriptionParagraphs: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    ],
     latitude: 33.3152,
     longitude: 44.3661,
   },

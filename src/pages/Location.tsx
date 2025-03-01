@@ -8,7 +8,8 @@ interface LocationProps {
 }
 
 const Location: React.FC<LocationProps> = ({ locationData }) => {
-  const { name, description, imageFileName, location } = locationData
+  const { name, descriptionParagraphs, imageFileName, location, dateRange } =
+    locationData
   return (
     <div className="flex justify-center w-full">
       <Box
@@ -33,14 +34,23 @@ const Location: React.FC<LocationProps> = ({ locationData }) => {
               {name} - {location}
             </Typography>
             <Typography variant="body2" className="mb-4 text-gray-500">
-              June 7, 2024 – May 7, 2024
+              {dateRange}
             </Typography>
           </Box>
 
           <Box className="left-28 relative w-5/6 mb-8">
-            <Typography variant="body1" className="text-lg text-gray-800">
-              {description}
-            </Typography>
+            <div>
+              {descriptionParagraphs?.map((paragraph, index) => (
+                <Typography
+                  variant="body1"
+                  className="text-lg text-gray-800"
+                  sx={{ marginBottom: "0.25rem" }}
+                  key={index}
+                >
+                  {paragraph}
+                </Typography>
+              ))}
+            </div>
           </Box>
 
           <Box className="w-3/4 min-w-[700px] max-w-[800px] max-h-[500px]">
@@ -63,7 +73,7 @@ const Location: React.FC<LocationProps> = ({ locationData }) => {
               variant="body2"
               className="mb-6 leading-relaxed text-gray-700"
             >
-              {description}
+              HELLO
             </Typography>
 
             <Box className="mt-4">
