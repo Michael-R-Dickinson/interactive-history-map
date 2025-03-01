@@ -1,32 +1,39 @@
 import React from "react"
 import { LocationData } from "../atoms"
-import { Box, Typography, Button } from "@mui/material"
-import { getImagePath } from "../utils"
+import { Box, Typography } from "@mui/material"
+import CaptionAndTextSection from "../components/CaptionAndTextSection"
+import LocationImage from "../components/LocationImage"
 
 interface LocationProps {
   locationData: LocationData
 }
 
 const Location: React.FC<LocationProps> = ({ locationData }) => {
-  const { name, descriptionParagraphs, imageFileName, location, dateRange } =
-    locationData
+  const {
+    name,
+    descriptionParagraphs,
+    imageFileName,
+    location,
+    dateRange,
+    globalSignificanceSection,
+    lifeAtLocationSection,
+  } = locationData
   return (
-    <div className="flex justify-center w-full">
+    <div className="h-fit flex justify-center w-full bg-white">
       <Box
         component="section"
         className="
         flex
-        min-h-[80vh]
         px-8
         py-12
         items-center
         justify-center
         md:min-w-[700px]
-        w-2/3
-      "
+        bg-white
+        w-3/5"
       >
-        <Box className="min-w-full">
-          <Box className="md:right-28 relative m-6">
+        <Box className="h-full min-w-full">
+          <Box className="md:right-28 relative mt-8 mb-4">
             <Typography
               variant="h2"
               className="font-serif text-5xl font-bold text-red-700"
@@ -53,65 +60,11 @@ const Location: React.FC<LocationProps> = ({ locationData }) => {
             </div>
           </Box>
 
-          <Box className="w-3/4 min-w-[700px] max-w-[800px] max-h-[500px]">
-            <img
-              src={getImagePath(imageFileName)}
-              alt={name}
-              className="w-full h-auto rounded-md shadow-md"
-            />
+          <LocationImage imageFileName={imageFileName} alt={name} />
 
-            <Box className="mt-4 mb-2">
-              <Typography
-                variant="h5"
-                className=" font-semibold tracking-tight text-gray-800"
-              >
-                Some Subtitle or Something
-              </Typography>
-            </Box>
-
-            <Typography
-              variant="body2"
-              className="mb-6 leading-relaxed text-gray-700"
-            >
-              HELLO
-            </Typography>
-
-            <Box className="mt-4">
-              <Button
-                variant="contained"
-                sx={{
-                  backgroundColor: "#d0021b",
-                  "&:hover": { backgroundColor: "#b60116" },
-                  textTransform: "none",
-                  borderRadius: "9999px",
-                  marginRight: "1rem",
-                }}
-              >
-                View Sources
-              </Button>
-              <Button
-                variant="outlined"
-                sx={{
-                  color: "#d0021b",
-                  borderColor: "#d0021b",
-                  textTransform: "none",
-                  borderRadius: "9999px",
-                  "&:hover": {
-                    backgroundColor: "#ffe5e7",
-                    borderColor: "#b60116",
-                    color: "#b60116",
-                  },
-                }}
-              >
-                Something else
-              </Button>
-            </Box>
-          </Box>
+          <CaptionAndTextSection textSection={lifeAtLocationSection} />
+          <CaptionAndTextSection textSection={globalSignificanceSection} />
         </Box>
-
-        {/* Potentially a caption if I want to source it */}
-        {/* <Typography variant="subtitle2" className="mb-1 text-gray-600">
-          </Typography> */}
       </Box>
     </div>
   )

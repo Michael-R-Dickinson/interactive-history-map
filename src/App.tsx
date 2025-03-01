@@ -17,7 +17,7 @@ const App: React.FC = () => {
   //   )
   // }, [])
   return (
-    <div className="min-w-[100vw] min-h-[100vh] bg-white">
+    <div className="w-[100vw] bg-white">
       <Box>
         <Navbar />
       </Box>
