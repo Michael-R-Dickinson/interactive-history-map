@@ -53,7 +53,7 @@ const defaultLocations: LocationData[] = [
   {
     imageFileName: "catahoyuk.jpg",
     location: "Turkey",
-    name: "Catahouyuk",
+    name: "Çatalhöyük",
     path: "catahoyuk",
     dateRange: "7100 to 5700 BCE",
     overview:
@@ -72,7 +72,7 @@ const defaultLocations: LocationData[] = [
     globalSignificanceSection: {
       caption: "Global Connections at Çatalhöyük",
       paragraphs: [
-        "Çatalhöyük society also engaged in global trade networks. This is edvident from the obsidian tools found inside the site. While there were no obsidian deposits found locally in the Çatalhöyük area, they acquired these specialized tools via trade with other nearby settlements",
+        "Çatalhöyük society also engaged in global trade networks. This is evident from the obsidian tools found inside the site. While there were no obsidian deposits found locally in the Çatalhöyük area, they acquired these specialized tools via trade with other nearby settlements",
         "This engagement and trade with other societies implies that the civilization did not exist in isolation, but instead participated in a network of exchange that allowed specialized tools to be imported from afar in an undeniably global transaction.",
       ],
       imageFileName: "obsidian_tools.jpg",
