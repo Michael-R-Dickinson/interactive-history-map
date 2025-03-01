@@ -1,7 +1,7 @@
 import { Box, Button } from "@mui/material"
 import React from "react"
 
-const ActionButtons = () => {
+const ActionButtons: React.FC = () => {
   return (
     <>
       <Box className="mt-4">
