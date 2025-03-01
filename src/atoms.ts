@@ -26,7 +26,7 @@ const defaultLocations: LocationData[] = [
     location: "Mali",
     name: "Wagadou",
     path: "wagadou",
-    dateRange: "300-1200 AD",
+    dateRange: "300-1200 AD (placeholder)",
     overview:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
     descriptionParagraphs: [
@@ -85,7 +85,7 @@ const defaultLocations: LocationData[] = [
     location: "Iran",
     name: "Zoroastrian Fire Temples",
     path: "fire_temples",
-    dateRange: "300-1200 AD",
+    dateRange: "300-1200 AD (placeholder)",
     overview:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     descriptionParagraphs: [
@@ -114,7 +114,7 @@ const defaultLocations: LocationData[] = [
     location: "Cordoba",
     name: "Great Mosque",
     path: "great_mosque",
-    dateRange: "300-1200 AD",
+    dateRange: "300-1200 AD (placeholder)",
     overview:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     descriptionParagraphs: [
@@ -143,7 +143,7 @@ const defaultLocations: LocationData[] = [
     location: "Western Sahara",
     name: "Kingdom of Mali",
     path: "taghaza",
-    dateRange: "300-1200 AD",
+    dateRange: "300-1200 AD (placeholder)",
     overview:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     descriptionParagraphs: [
@@ -172,7 +172,7 @@ const defaultLocations: LocationData[] = [
     location: "Iraq",
     name: "Baghdad",
     path: "baghdad",
-    dateRange: "300-1200 AD",
+    dateRange: "300-1200 AD (placeholder)",
     overview:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     descriptionParagraphs: [
