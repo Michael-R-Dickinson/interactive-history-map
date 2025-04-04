@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { styled } from "@mui/material"
 import { LocationData } from "../atoms"
-import { getImagePath, useNavigate } from "../utils"
+import { getImagePath, getLocationPath, useNavigate } from "../utils"
 
 const TileMotionContainer = styled(motion.div)({
   position: "relative",
@@ -47,7 +47,8 @@ const Tile: React.FC<TileProps> = ({ location: locationData }) => {
   })
 
   const onClick = () => {
-    navigate(path)
+    console.log(getLocationPath(path))
+    navigate(getLocationPath(path))
   }
 
   return (

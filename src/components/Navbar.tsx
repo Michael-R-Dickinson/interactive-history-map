@@ -1,7 +1,7 @@
 import React from "react"
 import { AppBar, Toolbar, Typography, Box, styled, alpha } from "@mui/material"
 import { useLocation } from "wouter"
-import { useNavigate } from "../utils"
+import { BASE_URL, useNavigate } from "../utils"
 
 const NavMenu = styled(AppBar)({
   backgroundColor: alpha("#fff", 0.5),
@@ -9,6 +9,8 @@ const NavMenu = styled(AppBar)({
 
 const Navbar: React.FC = () => {
   const [location] = useLocation()
+  const isHome = BASE_URL === location
+
   const navigate = useNavigate()
   return (
     <NavMenu
@@ -19,7 +21,7 @@ const Navbar: React.FC = () => {
     >
       <Toolbar
         className={`flex transition-all duration-500 ease-in-out items-center justify-between ${
-          location != "/" ? "bg-slate-200" : ""
+          isHome ? "bg-slate-200" : ""
         } `}
       >
         <Box>
@@ -30,7 +32,7 @@ const Navbar: React.FC = () => {
             Michael Dickinson
           </Typography>
         </Box>
-        <Box className="hover:text-gray-600 flex space-x-4 text-black">
+        <Box className="hover:text-gray-600 flex space-x-4 text-black cursor-pointer">
           <p
             onClick={() => navigate("/")}
             color="inherit"

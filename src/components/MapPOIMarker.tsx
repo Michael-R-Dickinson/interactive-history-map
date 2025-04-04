@@ -1,7 +1,7 @@
 import React from "react"
 import { LocationData } from "../atoms"
 import { motion } from "framer-motion"
-import { getImagePath, useNavigate } from "../utils"
+import { getImagePath, getLocationPath, useNavigate } from "../utils"
 
 interface MapPOIMarkerProps {
   location: LocationData
@@ -18,7 +18,7 @@ const MapPOIMarker: React.FC<MapPOIMarkerProps> = ({ location }) => {
     >
       <motion.img
         className="w-16 h-16 border-2 border-white rounded-full cursor-pointer shadow-[0_0_8px_rgba(255,255,255,0.25)] hover:shadow-[0_0_24px_rgba(255,255,255,1)] object-cover"
-        onClick={() => navigate(location.path)}
+        onClick={() => navigate(getLocationPath(location.path))}
         src={getImagePath(location.imageFileName)}
         variants={{
           rest: { scale: 1 },

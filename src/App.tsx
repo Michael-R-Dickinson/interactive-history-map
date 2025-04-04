@@ -18,10 +18,10 @@ const App: React.FC = () => {
   // }, [])
   return (
     <div className="w-[100vw] bg-white">
-      <Box>
-        <Navbar />
-      </Box>
       <Router base={BASE_URL}>
+        <Box>
+          <Navbar />
+        </Box>
         <Switch>
           <Route path="/">
             <LoadingScreen>
