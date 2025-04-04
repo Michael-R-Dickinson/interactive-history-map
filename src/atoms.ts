@@ -1,5 +1,5 @@
 import { atom } from "jotai"
-import locationsInfo from "./content"
+import locationsInfo from "./content/content"
 
 export type CaptionDescription = {
   caption: string
