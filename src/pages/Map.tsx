@@ -19,7 +19,9 @@ const Map: React.FC = () => {
           borderRight: "1px solid #ddd",
         }}
       >
-        <Box sx={{ marginTop: "3.5rem" }}>
+        <Box
+          sx={{ paddingTop: "3.5rem", maxHeight: "100%", overflowY: "scroll" }}
+        >
           <TileGrid />
         </Box>
       </Box>
