@@ -13,6 +13,7 @@ const Location: React.FC<LocationProps> = ({ locationData }) => {
     name,
     overview,
     imageFileName,
+    imageAttribution,
     location,
     dateRange,
     globalSignificanceSection,
@@ -62,21 +63,13 @@ const Location: React.FC<LocationProps> = ({ locationData }) => {
             >
               {overview}
             </Typography>
-            {/* <div>
-              {descriptionParagraphs?.map((paragraph, index) => (
-                <Typography
-                  variant="body1"
-                  className="text-lg text-gray-800"
-                  sx={{ marginBottom: "0.25rem" }}
-                  key={index}
-                >
-                  {paragraph}
-                </Typography>
-              ))}
-            </div> */}
           </Box>
 
-          <LocationImage imageFileName={imageFileName} alt={name} />
+          <LocationImage
+            imageFileName={imageFileName}
+            imageAttribution={imageAttribution}
+            alt={name}
+          />
 
           <CaptionAndTextSection textSection={descriptionSection} />
           <CaptionAndTextSection textSection={lifeAtLocationSection} />

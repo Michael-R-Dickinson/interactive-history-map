@@ -10,7 +10,7 @@ interface CaptionAndTextSectionProps {
 const CaptionAndTextSection: React.FC<CaptionAndTextSectionProps> = ({
   textSection,
 }) => {
-  const { caption, paragraphs, imageFileName } = textSection
+  const { caption, paragraphs, imageFileName, imageAttribution } = textSection
   return (
     <div>
       <Box className="mt-4 mb-2">
@@ -37,6 +37,7 @@ const CaptionAndTextSection: React.FC<CaptionAndTextSectionProps> = ({
             src={getImagePath(imageFileName)}
             className="object-contain rounded-md shadow-md max-h-[500px]"
           />
+          <p className="text-slate-700">{imageAttribution}</p>
         </Box>
       )}
     </div>
