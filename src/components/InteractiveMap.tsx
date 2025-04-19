@@ -9,7 +9,7 @@ const InteractiveMap: React.FC = () => {
   const locations = useAtomValue(locationsDataAtom)
   const [viewState, setViewState] = useState({
     latitude: 40,
-    longitude: 10,
+    longitude: -100,
     zoom: 1.5,
   })
 
