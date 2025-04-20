@@ -2,6 +2,7 @@ import React from "react"
 import { CaptionDescription } from "../atoms"
 import { Box, Typography } from "@mui/material"
 import { getImagePath } from "../utils"
+import GlobalHighlightedTypography from "./GlobalHighlightedTypography"
 
 interface CaptionAndTextSectionProps {
   textSection: CaptionDescription
@@ -27,7 +28,7 @@ const CaptionAndTextSection: React.FC<CaptionAndTextSectionProps> = ({
             className="mb-6 leading-relaxed text-gray-600"
             key={index}
           >
-            {paragraph}
+            <GlobalHighlightedTypography text={paragraph} />
           </Typography>
         ))}
       </Box>
