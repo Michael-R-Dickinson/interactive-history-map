@@ -14,13 +14,12 @@ const LocationImage: React.FC<LocationImageProps> = ({
   alt,
 }) => {
   return (
-    <Box className="w-3/4 min-w-[700px] max-w-[800px] max-h-[500px] mb-10">
+    <Box className="min-w-[700px] max-w-[800px] w-3/4 pb-5">
       <img
         src={getImagePath(imageFileName)}
         alt={alt}
-        className="w-full h-auto rounded-md shadow-md"
+        className="w-full h-auto rounded-md shadow-md max-h-[500px]"
       />
-
       <Typography variant="subtitle2" className="mb-1 text-gray-600">
         {imageAttribution}
       </Typography>
