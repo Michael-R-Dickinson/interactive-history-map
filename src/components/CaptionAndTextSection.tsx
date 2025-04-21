@@ -3,6 +3,7 @@ import { CaptionDescription } from "../atoms"
 import { Box, Typography } from "@mui/material"
 import { getImagePath } from "../utils"
 import GlobalHighlightedTypography from "./GlobalHighlightedTypography"
+import RichTextBlock from "./RichText"
 
 interface CaptionAndTextSectionProps {
   textSection: CaptionDescription
@@ -11,7 +12,8 @@ interface CaptionAndTextSectionProps {
 const CaptionAndTextSection: React.FC<CaptionAndTextSectionProps> = ({
   textSection,
 }) => {
-  const { caption, paragraphs, imageFileName, imageAttribution } = textSection
+  const { caption, paragraphs, imageFileName, richImageAttribution } =
+    textSection
   return (
     <div>
       <Box className="mt-4 mb-2">
@@ -38,7 +40,9 @@ const CaptionAndTextSection: React.FC<CaptionAndTextSectionProps> = ({
             src={getImagePath(imageFileName)}
             className="object-contain rounded-md shadow-md max-h-[500px]"
           />
-          <p className="text-slate-700">{imageAttribution}</p>
+          {richImageAttribution && (
+            <RichTextBlock richText={richImageAttribution} />
+          )}
         </Box>
       )}
     </div>

@@ -24,8 +24,15 @@ export const cordoba: LocationData = {
   globalSignificanceSection: {
     caption: "Global Significance of the Great Mosque",
     imageFileName: "mosque_of_light.jpg",
-    imageAttribution:
-      "Fernando - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=161540631",
+    richImageAttribution: [
+      {
+        text: "Fernando - Own work, CC BY-SA 4.0, ",
+      },
+      {
+        text: "https://commons.wikimedia.org/w/index.php?curid=161540631",
+        link: "https://commons.wikimedia.org/w/index.php?curid=161540631",
+      },
+    ],
     paragraphs: [
       "The architectural motifs shown in the mosque are globally significant for their influence on other instances of Islamic architecture. With its location in Cordoba, a cultural and intellectual hub in the Islamic world, the mosque was integrated into an existing network in Spain and beyond. This meant that traveling artisans, craftspeople, and designers would pass through Cordoba and take influence from the mosque's unique designs. This manifested in similar design elements being used in other Spanish Islamic structures, likely due to the influence of this mosque. One example of this is the Mezquita del Cristo de la Luz, built around 1000 CE.",
       "This mosque features similar horseshoe arches, whose style and horizontal repetition are recognizable as the Cordoban style. From this and the well-established trade network in Cordoba, we can infer that the mosque's architectural design spread in the Islamic world, influencing the designs of other monuments, the Mosque of Cristo de la Luz among them. This widespread influence highlights how architectural styles from the Great Mosque traveled outwardly, contributing to a global exchange of artistic and cultural ideas in the Islamic world and beyond.",

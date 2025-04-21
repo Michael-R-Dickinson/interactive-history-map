@@ -1,11 +1,19 @@
 import { atom } from "jotai"
 import locationsInfo from "./content/content"
 
+type RichTextBlock = {
+  text: string
+  italic?: boolean
+  link?: string
+}
+
+export type RichText = RichTextBlock[]
+
 export type CaptionDescription = {
   caption: string
   paragraphs: string[]
   imageFileName?: string
-  imageAttribution?: string
+  richImageAttribution?: RichText
 }
 
 export type LocationData = {
