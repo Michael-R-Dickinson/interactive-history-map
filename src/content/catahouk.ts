@@ -1,7 +1,42 @@
-import { LocationData } from "../atoms"
+import { LocationData, RichText } from "../atoms"
+
+const headerImageAttribution: RichText = [
+  {
+    text: "Artist’s impression of Çatalhöyük.",
+    italic: true,
+  },
+  { text: " Image credit: Dan Lewandowski, via " },
+  {
+    text: "Archaeologs",
+    link: "https://www.archaeologs.com/i/111/catalhuyuk",
+  },
+  { text: "." },
+]
+
+const obsidianToolsRichAttribution: RichText = [
+  {
+    text: "Two points, a splintered piece and a carving tool from IST Area.",
+    italic: true,
+  },
+  { text: " " },
+  {
+    text: "Tristan Carter, Nurcan Kayacan, and Marina Milić, “Chipped Stone,” in ",
+  },
+  {
+    text: "Çatalhöyük 2005 Archive Report",
+    italic: true,
+  },
+  { text: ", " },
+  {
+    text: "https://www.catalhoyuk.com/archive_reports/2005/ar05_31.html",
+    link: "https://www.catalhoyuk.com/archive_reports/2005/ar05_31.html",
+  },
+  { text: "." },
+]
 
 export const catahoyuk: LocationData = {
   imageFileName: "catahoyuk.jpg",
+  imageAttribution: headerImageAttribution,
   location: "Turkey",
   name: "Çatalhöyük",
   path: "catahoyuk",
@@ -26,6 +61,7 @@ export const catahoyuk: LocationData = {
       "This engagement and trade with other societies implies that the civilization did not exist in isolation, but instead participated in a network of exchange that allowed specialized tools to be imported from afar in an undeniably global transaction.",
     ],
     imageFileName: "obsidian_tools.jpg",
+    richImageAttribution: obsidianToolsRichAttribution,
   },
   latitude: 37.6664,
   longitude: 32.8257,

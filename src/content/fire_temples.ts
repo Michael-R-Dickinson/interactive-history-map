@@ -1,7 +1,28 @@
-import { LocationData } from "../atoms"
+import { LocationData, RichText } from "../atoms"
+
+const bakuFireTempleCaption: RichText = [
+  {
+    text: "Ateshgah Fire Temple, Baku, Azerbaijan.",
+    italic: true,
+  },
+  {
+    text: " Photo by Jesper Ahlin Marceta, October 13, 2019. Wikimedia Commons, ",
+  },
+  {
+    text: "CC BY-SA 4.0",
+    link: "https://creativecommons.org/licenses/by-sa/4.0",
+  },
+  { text: ", " },
+  {
+    text: "https://commons.wikimedia.org/wiki/File:Jahlinmarceta_baku_temple.jpg",
+    link: "https://commons.wikimedia.org/wiki/File:Jahlinmarceta_baku_temple.jpg",
+  },
+  { text: "." },
+]
 
 export const fire_temples: LocationData = {
   imageFileName: "fire_temple.jpg",
+  imageAttribution: bakuFireTempleCaption,
   location: "Achaemenid Empire",
   name: "Zoroastrian Fire Temples",
   path: "fire_temples",

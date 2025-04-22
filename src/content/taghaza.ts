@@ -1,7 +1,21 @@
-import { LocationData } from "../atoms"
+import { LocationData, RichText } from "../atoms"
+
+const greatMosqueCaption: RichText = [
+  {
+    text: "Great Mosque of Djenné, Mali.",
+    italic: true,
+  },
+  { text: " Photo by Baron Reznik, November 22, 2015. Flickr, " },
+  {
+    text: "https://www.flickr.com/photos/baronreznik/25939121633",
+    link: "https://www.flickr.com/photos/baronreznik/25939121633",
+  },
+  { text: "." },
+]
 
 export const taghaza: LocationData = {
-  imageFileName: "taghaza.jpg",
+  imageFileName: "mali_mosque.jpg",
+  imageAttribution: greatMosqueCaption,
   location: "Western Sahara",
   name: "Kingdom of Mali",
   path: "taghaza",

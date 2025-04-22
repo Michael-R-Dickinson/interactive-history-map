@@ -1,7 +1,23 @@
-import { LocationData } from "../atoms"
+import { LocationData, RichText } from "../atoms"
+
+const beaverPipeCaption: RichText = [
+  {
+    text: "Beaver effigy platform pipe, 100 BC–200 AD (pipestone, pearl, and bone), Havana Hopewell culture (200 BC–400 AD).",
+    italic: true,
+  },
+  {
+    text: " Thomas Gilcrease Museum, Tulsa, OK. Photo © Dirk Bakker / Bridgeman Art Library. In Alfred J. Andrea and James H. Overfield, ",
+  },
+  {
+    text: "The Human Record: Sources of Global History",
+    italic: true,
+  },
+  { text: ", 5th ed., 346–350. Boston: Houghton Mifflin, 2005." },
+]
 
 export const hopewell: LocationData = {
   imageFileName: "beaver_pipe.jpg",
+  imageAttribution: beaverPipeCaption,
   name: "Hopewell Culture",
   path: "hopewell",
   dateRange: "approx. 100 BC - 500 CE",

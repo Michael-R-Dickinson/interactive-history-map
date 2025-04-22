@@ -1,7 +1,23 @@
-import { LocationData } from "../atoms"
+import { LocationData, RichText } from "../atoms"
+
+const headerPyramidAttribution: RichText = [
+  {
+    text: "Chichen Itza, the Pyramid of Kukulcan with chacmool figure, Yucatán, Mexico.",
+    italic: true,
+  },
+  {
+    text: " Photo by Werner Forman, Universal Images Group via Getty Images. History.com, ",
+  },
+  {
+    text: "https://www.history.com/articles/maya",
+    link: "https://www.history.com/articles/maya",
+  },
+  { text: "." },
+]
 
 export const maya: LocationData = {
   imageFileName: "maya_pyramids.jpeg",
+  imageAttribution: headerPyramidAttribution,
   name: "Maya Civilization",
   path: "maya",
   dateRange: "2000 BC - approx. 17th c. CE",

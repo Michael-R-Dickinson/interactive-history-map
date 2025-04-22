@@ -1,7 +1,26 @@
-import { LocationData } from "../atoms"
+import { LocationData, RichText } from "../atoms"
+
+const headerImageAttribution: RichText = [
+  {
+    text: "View of the old city of Chinguetti, Mauritania.",
+    italic: true,
+  },
+  { text: " Photo by François COLIN, August 2004. Wikimedia Commons, " },
+  {
+    text: "CC BY-SA 2.5",
+    link: "https://creativecommons.org/licenses/by-sa/2.5",
+  },
+  { text: ", " },
+  {
+    text: "https://commons.wikimedia.org/wiki/File:Chinguetti-Vue_Goblale_Vieille_ville.jpg",
+    link: "https://commons.wikimedia.org/wiki/File:Chinguetti-Vue_Goblale_Vieille_ville.jpg",
+  },
+  { text: "." },
+]
 
 export const wagadou: LocationData = {
   imageFileName: "wagadou.jpg",
+  imageAttribution: headerImageAttribution,
   location: "Western Africa",
   name: "Wagadou",
   path: "wagadou",
