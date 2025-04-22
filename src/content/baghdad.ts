@@ -50,7 +50,7 @@ export const baghdad: LocationData = {
   location: "Iraq",
   name: "Baghdad",
   path: "baghdad",
-  dateRange: "750-1258 CE (Abbasid Caliphate)",
+  dateRange: "750 to 1258 CE (Abbasid Caliphate)",
   overview:
     "Baghdad was a remarkable city under the Abbasid Caliphate with many unique developments such as a form of healthcare for all citizens and psychiatric facilities for those with mental illness.",
   descriptionParagraphs: [

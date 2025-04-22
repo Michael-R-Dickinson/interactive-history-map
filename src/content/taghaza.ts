@@ -19,7 +19,7 @@ export const taghaza: LocationData = {
   location: "Western Sahara",
   name: "Kingdom of Mali",
   path: "taghaza",
-  dateRange: "1226 - 1610 CE",
+  dateRange: "1226 to 1610 CE",
   overview:
     "The Kingdom of Mali was a powerful economic hub around the 14th century, facilitating massive trade in the Western Sahara region. Propelled by leaders like Mansa Musa, the kingdom's wealth and status grew and became renowned across the Islamic world. ",
   descriptionParagraphs: [

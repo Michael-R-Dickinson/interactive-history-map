@@ -8,7 +8,6 @@ const headerImageAttribution: RichText = [
   { text: " Photo by François COLIN, August 2004. Wikimedia Commons, " },
   {
     text: "CC BY-SA 2.5",
-    link: "https://creativecommons.org/licenses/by-sa/2.5",
   },
   { text: ", " },
   {

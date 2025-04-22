@@ -21,7 +21,6 @@ const cristoDeLaLuzCaption: RichText = [
   { text: " Photo by Fernando, January 29, 2025. Wikimedia Commons, " },
   {
     text: "CC BY-SA 4.0",
-    link: "https://creativecommons.org/licenses/by-sa/4.0",
   },
   { text: ", " },
   {

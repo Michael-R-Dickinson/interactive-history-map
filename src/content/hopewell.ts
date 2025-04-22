@@ -20,7 +20,7 @@ export const hopewell: LocationData = {
   imageAttribution: beaverPipeCaption,
   name: "Hopewell Culture",
   path: "hopewell",
-  dateRange: "approx. 100 BC - 500 CE",
+  dateRange: "approx. 100 BC to 500 CE",
   location: "Ohio River Valley",
   overview:
     "The Hopewell Culture refers to a group of related Indigenous peoples centralized around the Ohio River who participated in a vast network of trade. They leveraged this network to craft numerous artifacts, such as intricately carved animal effigy pipes.",
