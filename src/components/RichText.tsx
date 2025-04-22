@@ -7,22 +7,23 @@ interface RichTextProps {
 
 const RichTextBlock: React.FC<RichTextProps> = ({ richText }) => {
   return (
-    <div className="text-slate-700 text-sm">
+    <div>
       {richText.map((block, index) => {
         if (block.link) {
           return (
-            <a
-              key={index}
-              href={block.link}
-              style={{
-                fontWeight: "normal",
-                fontSize: "inherit",
-                color: "inherit",
-              }}
-              className={`${block.italic ? "italic" : ""} appearance-none`}
-            >
-              {block.text}
-            </a>
+            <span key={index}>
+              <a
+                href={block.link}
+                style={{
+                  fontWeight: "normal",
+                  fontSize: "inherit",
+                  color: "inherit",
+                }}
+                className={`${block.italic ? "italic" : ""} appearance-none`}
+              >
+                {block.text}
+              </a>
+            </span>
           )
         }
         return (

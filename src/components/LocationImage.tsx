@@ -1,10 +1,12 @@
-import { Box, Typography } from "@mui/material"
+import { Box } from "@mui/material"
 import React from "react"
 import { getImagePath } from "../utils"
+import { RichText } from "../atoms"
+import RichTextBlock from "./RichText"
 
 interface LocationImageProps {
   imageFileName: string
-  imageAttribution?: string
+  imageAttribution?: RichText
   alt: string
 }
 
@@ -20,9 +22,9 @@ const LocationImage: React.FC<LocationImageProps> = ({
         alt={alt}
         className="w-full h-auto rounded-md shadow-md max-h-[500px]"
       />
-      <Typography variant="subtitle2" className="mb-1 text-gray-600">
-        {imageAttribution}
-      </Typography>
+      <div className="mb-1 text-sm text-gray-600">
+        {imageAttribution && <RichTextBlock richText={imageAttribution} />}
+      </div>
     </Box>
   )
 }

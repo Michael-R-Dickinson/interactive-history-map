@@ -41,7 +41,9 @@ const CaptionAndTextSection: React.FC<CaptionAndTextSectionProps> = ({
             className="object-contain rounded-md shadow-md max-h-[500px]"
           />
           {richImageAttribution && (
-            <RichTextBlock richText={richImageAttribution} />
+            <div className="text-slate-700 text-sm">
+              <RichTextBlock richText={richImageAttribution} />
+            </div>
           )}
         </Box>
       )}

@@ -18,7 +18,7 @@ export type CaptionDescription = {
 
 export type LocationData = {
   imageFileName: string
-  imageAttribution?: string
+  imageAttribution?: RichText
   name: string
   path: string
   dateRange: string
