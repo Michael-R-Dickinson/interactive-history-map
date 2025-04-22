@@ -9,6 +9,10 @@ const RichTextBlock: React.FC<RichTextProps> = ({ richText }) => {
   return (
     <div>
       {richText.map((block, index) => {
+        if (block?.break) {
+          return <br key={index} />
+        }
+
         if (block.link) {
           return (
             <span key={index}>

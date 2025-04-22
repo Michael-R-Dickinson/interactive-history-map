@@ -5,6 +5,7 @@ type RichTextBlock = {
   text: string
   italic?: boolean
   link?: string
+  break?: boolean
 }
 
 export type RichText = RichTextBlock[]

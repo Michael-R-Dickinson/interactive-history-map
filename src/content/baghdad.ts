@@ -1,7 +1,52 @@
-import { LocationData } from "../atoms"
+import { LocationData, RichText } from "../atoms"
+
+const baghdadRoundCityCaption: RichText = [
+  {
+    text: "The round city of Baghdad in the 10th century, peak of the Abbasid Caliphate.",
+    italic: true,
+  },
+  { text: " Illustration by Jean Soutif, Science Photo Library. " },
+  {
+    text: "The Guardian",
+    italic: true,
+  },
+  { text: ", March 16, 2016. " },
+  {
+    text: "https://www.theguardian.com/cities/2016/mar/16/story-cities-day-3-baghdad-iraq-world-civilisation",
+    link: "https://www.theguardian.com/cities/2016/mar/16/story-cities-day-3-baghdad-iraq-world-civilisation",
+  },
+  { text: "." },
+]
+
+const alZahrawiHospitalCaption: RichText = [
+  {
+    text: "Al-Zahrawi (Abulcasis) attending to a patient in a hospital in Córdoba, Al-Andalus.",
+    italic: true,
+  },
+  { text: " Illustration by Sheila Terry, Science Photo Library. " },
+  {
+    text: "AramcoWorld",
+    italic: true,
+  },
+  { text: ", March 1, 2017. " },
+  {
+    text: "https://www.aramcoworld.com/articles/2017/the-islamic-roots-of-the-modern-hospital",
+    link: "https://www.aramcoworld.com/articles/2017/the-islamic-roots-of-the-modern-hospital",
+  },
+  { text: "." },
+  {
+    text: "",
+    break: true,
+  },
+  {
+    text: "Note: this image does not necessarily depict the exact hospital constructed by Caliph Al-Mustanjid, but it is of a similar hospital located in Baghdad.",
+    italic: true,
+  },
+]
 
 export const baghdad: LocationData = {
-  imageFileName: "baghdad.jpeg",
+  imageFileName: "baghdad_round.jpg",
+  imageAttribution: baghdadRoundCityCaption,
   location: "Iraq",
   name: "Baghdad",
   path: "baghdad",
@@ -16,6 +61,9 @@ export const baghdad: LocationData = {
     paragraphs: [
       "This priority for public welfare was reflected in the city's architecture and city planning as well. The city placed the medical houses and hospital facilities on the banks of the Euphrates river, enabling them to have easy access to water and transportation. Because of these advantages, locations along this important river would have been valuable real-estate, so the Caliph's decision to place the hospital in such a central area demonstrates his commitment to providing widespread medical care. Had the Caliph prioritized commerce or monumental architecture over this medical system, he might have chosen to fill the space with markets or a royal palace, leaving the hospital to a less important or accessible location. Instead, he optimized the city's layout so the hospital could accommodate as many people as possible and provided it with the access to the key resources needed to treat them.",
     ],
+
+    imageFileName: "baghdad_hospital.jpg",
+    richImageAttribution: alZahrawiHospitalCaption,
   },
   globalSignificanceSection: {
     caption: "Baghdad as a Trade Hub on the Silk Road",
