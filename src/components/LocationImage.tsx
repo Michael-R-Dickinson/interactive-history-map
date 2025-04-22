@@ -22,7 +22,7 @@ const LocationImage: React.FC<LocationImageProps> = ({
         alt={alt}
         className="w-full h-auto rounded-md shadow-md max-h-[500px]"
       />
-      <div className="mb-1 text-sm text-gray-600">
+      <div className="my-1 text-sm text-gray-600">
         {imageAttribution && <RichTextBlock richText={imageAttribution} />}
       </div>
     </Box>
