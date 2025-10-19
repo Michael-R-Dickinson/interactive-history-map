@@ -15,7 +15,7 @@ const Location: React.FC<LocationProps> = ({ locationData }) => {
     imageFileName,
     imageAttribution,
     location,
-    dateRange,
+    // dateRange,
     globalSignificanceSection,
     lifeAtLocationSection,
     descriptionParagraphs,
