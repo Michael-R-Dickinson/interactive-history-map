@@ -1,4 +1,12 @@
+
 # React + TypeScript + Vite
+
+## DEPLOY
+```
+# be on main
+npm run build
+npm run deploy
+```
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
