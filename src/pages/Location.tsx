@@ -47,7 +47,8 @@ const Location: React.FC<LocationProps> = ({ locationData }) => {
               {name} - {location}
             </Typography>
             <Typography variant="body2" className="mb-4 text-gray-500">
-              {dateRange}
+              {/* {dateRange} */}
+              No dates here
             </Typography>
           </Box>
 
