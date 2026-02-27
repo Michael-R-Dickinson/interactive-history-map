@@ -1,58 +1,56 @@
+# Interactive History Map
 
-# React + TypeScript + Vite
+A single-page application for exploring historical locations and their global significance through an interactive map interface. Each location links to a detail page covering the site's history, daily life, and connections to broader global networks.
 
-## DEPLOY
+## Stack
+
+- **React 19** — UI framework
+- **TypeScript** — type-safe throughout
+- **Vite 6** — build tooling and dev server
+- **MapLibre GL / react-map-gl** — vector tile rendering for the interactive map
+- **MUI (Material UI v6)** — layout primitives and component base
+- **Tailwind CSS v4** — utility styling via the Vite plugin
+- **Jotai** — lightweight atomic state management
+- **Framer Motion** — page and component animations
+- **wouter** — minimal client-side routing
+
+Content is statically defined in TypeScript modules under `src/content/`, one file per location. Images are served from `public/`.
+
+The app is deployed as a static site to GitHub Pages at `/interactive-history-map/`.
+
+## Development
+
+Install dependencies:
+
+```bash
+npm install
 ```
-# be on main
+
+Start the dev server:
+
+```bash
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build
+```
+
+This runs `tsc -b` followed by `vite build`. Output goes to `dist/`.
+
+To preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## Deploy
+
+The app deploys to GitHub Pages via `gh-pages`. Build first, then deploy from `main`:
+
+```bash
 npm run build
 npm run deploy
-```
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
 ```
