@@ -2,6 +2,9 @@
 
 A single-page application for exploring historical locations and their global significance through an interactive map interface. Each location links to a detail page covering the site's history, daily life, and connections to broader global networks.
 
+## Live Deployment
+[Deployment](https://michael-r-dickinson.github.io/interactive-history-map/)
+
 ## Stack
 
 - **React 19** — UI framework
